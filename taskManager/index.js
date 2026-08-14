@@ -7,7 +7,7 @@ const connectDB = require("./config/db.config.js");
 
 //DB connect
 connectDB();
-
+app.use(express.static("public"));
 app.get("/",(req,res)=>{
     res.send("Server start...");
 });
